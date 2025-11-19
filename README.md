@@ -17,11 +17,11 @@ Implemented using synchronous design principles with careful attention to:
 (2.)	Modular hierarchy: Reusable components with well-defined interfaces
 (3.)	Static timing closure: All paths meet setup/hold with >50% margin
 (4.)	Synthesis-friendly coding: Avoided latches, ensured full case coverage, used explicit resets
-This architecture mirrors industry ASIC design practices where power, area, and timing must be co-optimized.
+### This architecture mirrors industry ASIC design practices where power, area, and timing must be co-optimized.
 ## Core Component Implementations
 1. Programmable Clock Divider
 Design Objective: Generate precise 1 Hz enable signal from 100 MHz reference without using PLL resources.
-Technical Approach:
+### Technical Approach:
 architecture rtl of clock_divider is
     signal count : unsigned(25 downto 0) := (others => '0');
     constant TERMINAL_COUNT : unsigned(25 downto 0) := to_unsigned(49_999_999, 26);
@@ -165,6 +165,6 @@ If transitioning this design to an ASIC:
 This project demonstrates proficiency in RTL design, hierarchical architecture, timing-driven optimization, and hardware validation, core competencies for ASIC design roles. The modular approach, rigorous verification methodology, and synthesis-aware coding practices directly translate to industry tape-out workflows.
 The combination of hands-on implementation and teaching experience showcases both technical depth and communication skills, making me well-prepared for collaborative ASIC development environments.
 
-## Design Tools: Vivado, ModelSim, GTKWave, Git
-## Skills: VHDL, Verilog, SystemVerilog, Python, TCL scripting
+### Design Tools: Vivado, ModelSim, GTKWave, Git
+### Skills: VHDL, Verilog, SystemVerilog, Python, TCL scripting
 
