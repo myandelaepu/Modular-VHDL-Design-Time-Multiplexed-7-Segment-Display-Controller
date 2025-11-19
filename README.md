@@ -50,6 +50,7 @@ Design Rationale:
 (b.)	Synchronous parallel load (load_n)
 (c.)	Conditional count enable
 (d.)	Automatic wrap-around (0→15→0)
+## The architecture Implementation Design
 ### Critical Design Decisions:
 architecture rtl of counter is
     signal counter_reg : unsigned(3 downto 0) := (others => '0');
@@ -154,11 +155,11 @@ If transitioning this design to an ASIC:
 (d.)	Add scan chain insertion for manufacturing test coverage
 (e.)	Estimate die area: ~0.02 mm² in 28nm CMOS (primarily flip-flops and routing)
 ## Repository Contents
-📁 /rtl/ - Synthesizable VHDL source files
-📁 /constraints/ - Basys3.xdc pin assignments and timing constraints
-📁 /sim/ - ModelSim testbenches for component-level verification
-📁 /docs/ - Block diagrams, timing analysis reports, synthesis logs
-📁 /hardware/ - Photos of working FPGA implementation, oscilloscope captures
+### 📁 /rtl/ - Synthesizable VHDL source files
+### 📁 /constraints/ - Basys3.xdc pin assignments and timing constraints
+### 📁 /sim/ - ModelSim testbenches for component-level verification
+### 📁 /docs/ - Block diagrams, timing analysis reports, synthesis logs
+### 📁 /hardware/ - Photos of working FPGA implementation, oscilloscope captures
 ## Build Instructions: Vivado 2019.1+, target Artix-7 (xc7a35tcpg236-1)
 ## Conclusion
 This project demonstrates proficiency in RTL design, hierarchical architecture, timing-driven optimization, and hardware validation, core competencies for ASIC design roles. The modular approach, rigorous verification methodology, and synthesis-aware coding practices directly translate to industry tape-out workflows.
